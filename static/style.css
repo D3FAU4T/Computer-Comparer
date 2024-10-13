@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+html {
+  background-color: #1e1e1e;
+}
+
+body > h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  background-color: black;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 87.5%;
+  margin-top: 2rem;
+  position: relative;
+  padding-bottom: 6rem;
+  margin-bottom: 3rem;
+  min-width: max-content;
+}
+
+form > button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: green;
+  outline: none;
+  grid-column: 3;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 30%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer > input {
+  color: black;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+  accent-color: blue;
+  outline-color: blue;
+  caret-color: blue;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  width: 90%;
+}
+
+.grid > div {
+  background-color: #ffffff;
+  border: 2px solid red;
+  width: 100%;
+}
+
+.stack_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: max-content;
+  margin-bottom: 2rem;
+}
+
+.element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: crimson;
+  height: 3rem;
+  width: 85svw;
+  border-radius: 7px;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.element > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+}
+
+.element > div:first-child > span,
+.element > div:first-child::before,
+.element > div:first-child::after {
+  content: "";
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.element > div:first-child {
+	cursor: grab;
+}
+
+.remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.ghost {
+  opacity: 0.5;
+}
+
+@media screen and (orientation: portrait) {
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  form > button {
+    grid-column: 1;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+}

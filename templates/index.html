@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparer</title>
+    <link rel="icon" href="{{ url_for('static', filename='icon.ico') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script type="module" src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+    <h1>Computer Comparer</h1>
+
+    <form>
+        <div class="inputContainer">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" name="name" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="displayInput">Display (Inches)</label>
+            <input type="number" id="displayInput" name="display" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="processorInput">Processor Speed (GHz)</label>
+            <input type="number" id="processorInput" name="processor" required>
+        </div>
+    
+        <div class="inputContainer">
+            <label for="ramInput">RAM (GB)</label>
+            <input type="number" id="ramInput" name="ram" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="priceInput">Price (Rúpia)</label>
+            <input type="number" id="priceInput" name="price" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="storageInput">Storage (GB)</label>
+            <input type="number" id="storageInput" name="storage" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="batteryInput">Battery (Hours)</label>
+            <input type="number" id="batteryInput" name="battery" required>
+        </div>
+
+        <div class="inputContainer">
+            <label for="weightInput">Weight (KG)</label>
+            <input type="number" id="weightInput" name="weight" required>
+        </div>
+
+        <button type="submit">Add</button>
+
+    </form>
+
+    <div class="stack_container"></div>
+
+    <div class="grid">
+        <div><canvas id="processorCanvas"></canvas></div>
+        <div><canvas id="displayCanvas"></canvas></div>
+        <div><canvas id="ramCanvas"></canvas></div>
+        <div><canvas id="priceCanvas"></canvas></div>
+        <div><canvas id="storageCanvas"></canvas></div>
+        <div><canvas id="batteryCanvas"></canvas></div>
+        <div><canvas id="weightCanvas"></canvas></div>
+    </div>
+</body>
+
+</html>
