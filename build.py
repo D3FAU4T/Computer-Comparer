@@ -29,7 +29,7 @@ def build():
         ]
         
     else:
-        print(color.red('× Unsupported OS'))
+        print(color.red(f'× Unsupported OS: {os_type}'))
         return
     
     try:
