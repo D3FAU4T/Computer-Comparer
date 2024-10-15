@@ -26,6 +26,7 @@ def get_database(path: str):
     try:
         with open(path, 'r') as f:
             data = json.load(f)
+            
         return data
     
     except json.JSONDecodeError:
@@ -33,8 +34,10 @@ def get_database(path: str):
         
     except FileNotFoundError:
         print(f'{color.red("× File not found:")} {color.green("data.json")}\n{color.yellow("! Automatically creating cache file with the following data format:")}\n\n{color.purple(DATA_FORMAT)}\n\n')
+        
         with open(path, 'w') as f:
             f.write('[]')
+            
         return get_database(path)
         
 get_database(DATABASE_PATH) 
@@ -55,7 +58,9 @@ def update_data():
     try:
         with open(DATABASE_PATH, 'w') as f:
             json.dump(data, f, indent=4)
+            
         return {'success': True}
+    
     except:
         return {'success': False}
 
